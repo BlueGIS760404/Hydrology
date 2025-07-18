@@ -107,10 +107,3 @@ def process_local_files(watershed_shp, water_class_tif):
     plt.ylabel('Northing (m)')
     plt.savefig('water_class_distribution_map.png')
     plt.close()
-
-# Note: Call process_local_files('watershed_boundary_huc10.shp', 'water_class_raster.tif')
-# after downloading files from Google Drive
-# To find a valid HUC10 code near Denver, run in GEE Code Editor:
-# var huc10 = ee.FeatureCollection('USGS/WBD/2017/HUC10')
-#   .filterBounds(ee.Geometry.Point([-105, 39.7]));
-# print(huc10.limit(10).aggregate_array('huc10'));
