@@ -9,7 +9,7 @@ from matplotlib.patches import Patch
 # Load watershed shapefile (assumed exported with a valid HUC10 code near Denver, e.g., from GEE)
 watershed = gpd.read_file('watershed_boundary_huc10.shp')
 
-# Load water class raster (originally from JRC dataset, may be reinterpreted as nitrate if replaced)
+# Load water class raster (originally from JRC dataset)
 with rasterio.open('water_class_raster.tif') as src:
     # Clip raster to watershed boundary
     clipped_data, clipped_transform = mask(src, watershed.geometry, crop=True)
