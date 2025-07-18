@@ -1,4 +1,4 @@
-# Automated Watershed Water Classification Analysis
+# Automated Water Classification Analysis
 
 A two-step Python pipeline for extracting and analyzing water class data using Google Earth Engine (GEE) and local processing.
 
