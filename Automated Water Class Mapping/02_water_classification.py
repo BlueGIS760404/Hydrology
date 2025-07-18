@@ -5,6 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 
+# Note: This script assumes the raster is the waterClass data from JRC/GSW1_4/YearlyHistory/2020.
 # Load watershed shapefile (assumed exported with a valid HUC10 code near Denver, e.g., from GEE)
 watershed = gpd.read_file('watershed_boundary_huc10.shp')
 
@@ -55,5 +56,3 @@ plt.legend(handles=water_class_legend + boundary_legend, loc='upper right', bbox
 
 plt.savefig('water_class_distribution_map.png')
 plt.close()
-
-# Note: This script assumes the raster is the waterClass data from JRC/GSW1_4/YearlyHistory/2020.
