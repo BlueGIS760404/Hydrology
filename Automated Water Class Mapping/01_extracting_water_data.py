@@ -45,14 +45,14 @@ water_data = ee.Image('JRC/GSW1_4/YearlyHistory/2020').select('waterClass')
 
 # Clip the raster to the watershed boundary
 try:
-    clipped_nitrate = water_data.clip(watershed_geometry)
+    clipped_watershed = water_data.clip(watershed_geometry)
 except Exception as e:
     print("Error during clipping:", str(e))
     raise e
 
 # Export the clipped raster to Google Drive
 raster_export_task = ee.batch.Export.image.toDrive(
-    image=clipped_nitrate,
+    image=clipped_watershed,
     description='water_class_raster',
     scale=30,  # Resolution in meters
     region=watershed_geometry,
