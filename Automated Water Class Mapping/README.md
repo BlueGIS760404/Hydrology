@@ -10,7 +10,7 @@ A two-step Python pipeline for extracting and analyzing water class data using G
   pip install earthengine-api geopandas rasterio numpy matplotlib
   
 ## 🚀 Quick Start
-1. **First, run the data export script** (`extracting_water_data.py`) to:
+1. **First, run the data export script** (`water_data_extraction.py`) to:
    - Fetch watershed boundaries from GEE
    - Export water class raster (JRC dataset)
    - Save outputs to your Google Drive
